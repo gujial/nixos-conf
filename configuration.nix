@@ -53,6 +53,8 @@
     '';
   };
 
+  boot.initrd.systemd.enable = true;
+
   networking.hostName = "laptop-gu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -140,9 +142,9 @@
     asusctl
     wineWowPackages.waylandFull
     winetricks
-    blesh
     xsettingsd
     pinentry
+    sbctl
 
     (writeShellScriptBin "nvidia-offload" ''
       #!/usr/bin/env bash

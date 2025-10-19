@@ -53,6 +53,8 @@
     nur.repos.xddxdd.dingtalk
     wemeet
     qbittorrent
+    blesh
+    pinentry
 
     jetbrains.clion
     jetbrains.goland
@@ -80,8 +82,16 @@
     enable = true;
     userName = "gujial";
     userEmail = "gu18647403665@outlook.com";
-    signing.key = "85CCE836E065642F";
+    signing.key = "DDC9F70191CA14A3";
     signing.signByDefault = true;
+  };
+
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      [[ $- == *i* ]] && source -- "$(blesh-share)"/ble.sh --attach=none
+      [[ ! ''${BLE_VERSION-} ]] || ble-attach
+    '';
   };
 
   # This value determines the Home Manager release that your
