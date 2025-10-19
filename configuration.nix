@@ -230,6 +230,15 @@
     acceleration = "cuda";
   };
   services.ratbagd.enable = true;
+  services.xrdp = {
+    defaultWindowManager = "startplasma-x11";
+    enable = true;
+    openFirewall = true;
+  };
+
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "gujial" ];
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   fonts = {
     packages = with pkgs; [

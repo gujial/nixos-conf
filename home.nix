@@ -75,6 +75,8 @@
     kdePackages.krecorder
     kdePackages.kwave
     supergfxctl-plasmoid
+    kdePackages.discover
+    kdiff3
   ];
 
   # git 相关配置
