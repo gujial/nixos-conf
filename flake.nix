@@ -40,6 +40,11 @@
       url = "github:omarcresp/cursor-flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    re3-flake = {
+      url = "github:gujial/re3-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -51,6 +56,7 @@
       nur,
       lazyvim-nix,
       cursor,
+      re3-flake,
       ...
     }:
     {
@@ -100,9 +106,14 @@
             (
               { pkgs, ... }:
               {
+                nixpkgs.overlays = [
+                  nur.overlays.default
+                ];
+
                 environment.systemPackages = [
                   zen-browser.packages.${pkgs.system}.twilight
                   cursor.packages.${pkgs.system}.default
+                  re3-flake.packages.${pkgs.system}.re3-vc
                 ];
               }
             )

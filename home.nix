@@ -29,6 +29,17 @@
   # 这些软件将仅在当前用户下可用，不会影响系统级别的配置
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
 
+  home.sessionVariables = {
+    LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib/";
+    IDEA_VM_OPTIONS="/home/gujial/jetbra/vmoptions/idea.vmoptions";
+    CLION_VM_OPTIONS="/home/gujial/jetbra/vmoptions/clion.vmoptions";
+    PYCHARM_VM_OPTIONS="/home/gujial/jetbra/vmoptions/pycharm.vmoptions";
+    GOLAND_VM_OPTIONS="/home/gujial/jetbra/vmoptions/goland.vmoptions";
+    DATAGRIP_VM_OPTIONS="/home/gujial/jetbra/vmoptions/datagrip.vmoptions";
+    RUSTROVER_VM_OPTIONS="/home/gujial/jetbra/vmoptions/rustrover.vmoptions";
+    RIDER_VM_OPTIONS="/home/gujial/jetbra/vmoptions/rider.vmoptions";
+  };
+
   home.packages = with pkgs; [
     tmux
     fastfetch
@@ -43,7 +54,6 @@
     adwsteamgtk
     osu-lazer-bin
     android-studio
-    libreoffice-qt6-fresh
     prismlauncher
     ventoy-full-qt
     projectlibre
@@ -55,6 +65,8 @@
     qbittorrent
     blesh
     pinentry
+    wpsoffice-cn
+    splayer
 
     jetbrains.clion
     jetbrains.goland
@@ -82,8 +94,8 @@
   # git 相关配置
   programs.git = {
     enable = true;
-    userName = "gujial";
-    userEmail = "gu18647403665@outlook.com";
+    settings.user.name = "gujial";
+    settings.user.email = "gu18647403665@outlook.com";
     signing.key = "DDC9F70191CA14A3";
     signing.signByDefault = true;
   };

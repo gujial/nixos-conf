@@ -66,6 +66,7 @@
   networking.networkmanager.enable = true;
   networking.firewall = {
     enable = true;
+    allowedTCPPorts = [ 25565 ];
     trustedInterfaces = [ "Mihomo" ];
     checkReversePath = false;
   };
@@ -88,11 +89,35 @@
     LC_TIME = "zh_CN.UTF-8";
   };
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      qt6Packages = prev.qt6Packages.overrideScope (f: p: {
+        fcitx5-qt = p.fcitx5-qt.overrideAttrs (old: {
+          patches = [
+            (prev.fetchpatch2 {
+              url = "https://github.com/fcitx/fcitx5-qt/commit/46a07a85d191fd77a1efc39c8ed43d0cd87788d2.patch?full_index=1";
+              hash = "sha256-qv8Rj6YoFdMQLOB2R9LGgwCHKdhEji0Sg67W37jSIac=";
+            })
+            (prev.fetchpatch2 {
+              url = "https://github.com/fcitx/fcitx5-qt/commit/6ac4fdd8e90ff9c25a5219e15e83740fa38c9c71.patch?full_index=1";
+              hash = "sha256-x0OdlIVmwVuq2TfBlgmfwaQszXLxwRFVf+gEU224uVA=";
+            })
+            (prev.fetchpatch2 {
+              url = "https://github.com/fcitx/fcitx5-qt/commit/1d07f7e8d6a7ae8651eda658f87ab0c9df08bef4.patch?full_index=1";
+              hash = "sha256-22tKD7sbsTJcNqur9/Uf+XAvMvA7tzNQ9hUCMm+E+E0=";
+            })
+          ];
+        });
+      });
+    })
+  ];
+
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
     fcitx5.addons = with pkgs; [
       fcitx5-gtk # alternatively, kdePackages.fcitx5-qt
+      kdePackages.fcitx5-qt
       fcitx5-chinese-addons # table input method support
     ];
     # fcitx5.waylandFrontend = true;
@@ -145,6 +170,8 @@
     xsettingsd
     pinentry
     sbctl
+    usbutils
+    python3
 
     (writeShellScriptBin "nvidia-offload" ''
       #!/usr/bin/env bash
@@ -214,6 +241,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "ventoy-qt5-1.1.07"
     "openssl-1.1.1w"
+    "mbedtls-2.28.10"
   ];
 
   # List packages installed in system profile. To search, run:
