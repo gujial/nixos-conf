@@ -30,7 +30,7 @@
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
 
   home.sessionVariables = {
-    LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib/";
+    LD_LIBRARY_PATH="${pkgs.libGL}/lib/:${pkgs.stdenv.cc.cc.lib}/lib/";
     IDEA_VM_OPTIONS="/home/gujial/jetbra/vmoptions/idea.vmoptions";
     CLION_VM_OPTIONS="/home/gujial/jetbra/vmoptions/clion.vmoptions";
     PYCHARM_VM_OPTIONS="/home/gujial/jetbra/vmoptions/pycharm.vmoptions";
@@ -67,6 +67,10 @@
     pinentry
     wpsoffice-cn
     splayer
+    darktable
+    scanmem
+    signal-desktop
+    postman
 
     jetbrains.clion
     jetbrains.goland
@@ -89,6 +93,9 @@
     supergfxctl-plasmoid
     kdePackages.discover
     kdiff3
+    kdePackages.sweeper
+    kdePackages.ksystemlog
+    kdePackages.sddm-kcm
   ];
 
   # git 相关配置

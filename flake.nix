@@ -45,6 +45,11 @@
       url = "github:gujial/re3-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tinyMediaManager-flake = {
+      url = "github:gujial/tinyMediaManager-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -57,6 +62,7 @@
       lazyvim-nix,
       cursor,
       re3-flake,
+      tinyMediaManager-flake,
       ...
     }:
     {
@@ -114,6 +120,7 @@
                   zen-browser.packages.${pkgs.system}.twilight
                   cursor.packages.${pkgs.system}.default
                   re3-flake.packages.${pkgs.system}.re3-vc
+                  tinyMediaManager-flake.packages.${pkgs.system}.default
                 ];
               }
             )

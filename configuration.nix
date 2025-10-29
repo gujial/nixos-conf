@@ -89,29 +89,6 @@
     LC_TIME = "zh_CN.UTF-8";
   };
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      qt6Packages = prev.qt6Packages.overrideScope (f: p: {
-        fcitx5-qt = p.fcitx5-qt.overrideAttrs (old: {
-          patches = [
-            (prev.fetchpatch2 {
-              url = "https://github.com/fcitx/fcitx5-qt/commit/46a07a85d191fd77a1efc39c8ed43d0cd87788d2.patch?full_index=1";
-              hash = "sha256-qv8Rj6YoFdMQLOB2R9LGgwCHKdhEji0Sg67W37jSIac=";
-            })
-            (prev.fetchpatch2 {
-              url = "https://github.com/fcitx/fcitx5-qt/commit/6ac4fdd8e90ff9c25a5219e15e83740fa38c9c71.patch?full_index=1";
-              hash = "sha256-x0OdlIVmwVuq2TfBlgmfwaQszXLxwRFVf+gEU224uVA=";
-            })
-            (prev.fetchpatch2 {
-              url = "https://github.com/fcitx/fcitx5-qt/commit/1d07f7e8d6a7ae8651eda658f87ab0c9df08bef4.patch?full_index=1";
-              hash = "sha256-22tKD7sbsTJcNqur9/Uf+XAvMvA7tzNQ9hUCMm+E+E0=";
-            })
-          ];
-        });
-      });
-    })
-  ];
-
   i18n.inputMethod = {
     type = "fcitx5";
     enable = true;
@@ -172,15 +149,8 @@
     sbctl
     usbutils
     python3
-
-    (writeShellScriptBin "nvidia-offload" ''
-      #!/usr/bin/env bash
-      export __NV_PRIME_RENDER_OFFLOAD=1
-      export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-      export __GLX_VENDOR_LIBRARY_NAME=nvidia
-      export __VK_LAYER_NV_optimus=NVIDIA_only
-      exec "$@"
-    '')
+    quota
+    rclone
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -192,6 +162,7 @@
       "wheel"
       "docker"
       "gamemode"
+      "adbusers"
     ];
   };
 
@@ -218,11 +189,15 @@
   programs.clash-verge.autoStart = true;
   programs.clash-verge.serviceMode = true;
   programs.gamemode.enable = true;
+  programs.adb.enable = true;
   programs.kde-pim = {
     enable = true;
     kmail = true;
     kontact = true;
   };
+
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   programs.steam = {
     enable = true;
@@ -235,6 +210,12 @@
       ];
     };
   };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    libGL
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
