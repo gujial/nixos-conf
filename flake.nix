@@ -13,9 +13,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
     };
 
     zen-browser = {
@@ -56,7 +62,6 @@
     inputs@{
       nixpkgs,
       home-manager,
-      zen-browser,
       lanzaboote,
       nur,
       lazyvim-nix,
@@ -78,19 +83,14 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               nixpkgs.overlays = [ nur.overlays.default ];
-
+              home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.users.gujial = import ./home.nix;
-
-              # 使用 home-manager.extraSpecialArgs 自定义传递给 ./home.nix 的参数
-              # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
-              # home-manager.extraSpecialArgs = inputs;
             }
 
             lanzaboote.nixosModules.lanzaboote
             (
               { pkgs, lib, ... }:
               {
-
                 environment.systemPackages = [
                   # For debugging and troubleshooting Secure Boot.
                   pkgs.sbctl
@@ -117,10 +117,9 @@
                 ];
 
                 environment.systemPackages = [
-                  zen-browser.packages.${pkgs.system}.twilight
-                  cursor.packages.${pkgs.system}.default
-                  re3-flake.packages.${pkgs.system}.re3-vc
-                  tinyMediaManager-flake.packages.${pkgs.system}.default
+                  cursor.packages.${pkgs.stdenv.hostPlatform.system}.default
+                  re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.re3-vc
+                  tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
                 ];
               }
             )

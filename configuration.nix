@@ -95,7 +95,7 @@
     fcitx5.addons = with pkgs; [
       fcitx5-gtk # alternatively, kdePackages.fcitx5-qt
       kdePackages.fcitx5-qt
-      fcitx5-chinese-addons # table input method support
+      qt6Packages.fcitx5-chinese-addons # table input method support
     ];
     # fcitx5.waylandFrontend = true;
   };
@@ -121,12 +121,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+    wireplumber.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -145,8 +140,7 @@
     wineWowPackages.waylandFull
     winetricks
     xsettingsd
-    pinentry
-    sbctl
+    pinentry-curses
     usbutils
     python3
     quota
@@ -213,12 +207,24 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc.lib
+    libadwaita
+    gtk4
+    glib
+    pango
+    cairo
+    gdk-pixbuf
+    atk
+    harfbuzz
+    fribidi
+    gobject-introspection
     libGL
+    stdenv.cc.cc.lib
+    graphene
   ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
   nixpkgs.config.permittedInsecurePackages = [
     "ventoy-qt5-1.1.07"
     "openssl-1.1.1w"
@@ -254,7 +260,7 @@
       nerd-fonts.fira-code
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       wqy_zenhei
       hack-font
       source-code-pro

@@ -1,4 +1,5 @@
 {
+  inputs,
   config,
   lib,
   pkgs,
@@ -30,7 +31,8 @@
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
 
   home.sessionVariables = {
-    LD_LIBRARY_PATH="${pkgs.libGL}/lib/:${pkgs.stdenv.cc.cc.lib}/lib/";
+#     LD_LIBRARY_PATH="${pkgs.libGL}/lib/:${pkgs.stdenv.cc.cc.lib}/lib/";
+    LD_LIBRARY_PATH=/run/current-system/sw/share/nix-ld/lib;
     IDEA_VM_OPTIONS="/home/gujial/jetbra/vmoptions/idea.vmoptions";
     CLION_VM_OPTIONS="/home/gujial/jetbra/vmoptions/clion.vmoptions";
     PYCHARM_VM_OPTIONS="/home/gujial/jetbra/vmoptions/pycharm.vmoptions";
@@ -64,13 +66,13 @@
     wemeet
     qbittorrent
     blesh
-    pinentry
     wpsoffice-cn
     splayer
     darktable
     scanmem
     signal-desktop
     postman
+    uv
 
     jetbrains.clion
     jetbrains.goland
@@ -97,6 +99,12 @@
     kdePackages.ksystemlog
     kdePackages.sddm-kcm
   ];
+
+  imports = [
+    inputs.zen-browser.homeModules.twilight
+  ];
+
+  programs.zen-browser.enable = true;
 
   # git 相关配置
   programs.git = {
