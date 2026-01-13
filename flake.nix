@@ -13,21 +13,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay.follows = "rust-overlay";
-    };
-
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
-      # to have it up-to-date or simply don't specify the nixpkgs input
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -56,6 +43,8 @@
       url = "github:gujial/tinyMediaManager-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    wechat-devtools.url = "github:MaikoTan/wechat-devtools";
   };
 
   outputs =
@@ -68,6 +57,7 @@
       cursor,
       re3-flake,
       tinyMediaManager-flake,
+      wechat-devtools,
       ...
     }:
     {
@@ -120,6 +110,7 @@
                   cursor.packages.${pkgs.stdenv.hostPlatform.system}.default
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.re3-vc
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
+                  wechat-devtools.packages.${pkgs.stdenv.hostPlatform.system}.default
                 ];
               }
             )

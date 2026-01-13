@@ -31,22 +31,20 @@
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
 
   home.sessionVariables = {
-#     LD_LIBRARY_PATH="${pkgs.libGL}/lib/:${pkgs.stdenv.cc.cc.lib}/lib/";
-    LD_LIBRARY_PATH=/run/current-system/sw/share/nix-ld/lib;
-    IDEA_VM_OPTIONS="/home/gujial/jetbra/vmoptions/idea.vmoptions";
-    CLION_VM_OPTIONS="/home/gujial/jetbra/vmoptions/clion.vmoptions";
-    PYCHARM_VM_OPTIONS="/home/gujial/jetbra/vmoptions/pycharm.vmoptions";
-    GOLAND_VM_OPTIONS="/home/gujial/jetbra/vmoptions/goland.vmoptions";
-    DATAGRIP_VM_OPTIONS="/home/gujial/jetbra/vmoptions/datagrip.vmoptions";
-    RUSTROVER_VM_OPTIONS="/home/gujial/jetbra/vmoptions/rustrover.vmoptions";
-    RIDER_VM_OPTIONS="/home/gujial/jetbra/vmoptions/rider.vmoptions";
+    LD_LIBRARY_PATH = /run/current-system/sw/share/nix-ld/lib;
+    IDEA_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/idea.vmoptions";
+    CLION_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/clion.vmoptions";
+    PYCHARM_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/pycharm.vmoptions";
+    GOLAND_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/goland.vmoptions";
+    DATAGRIP_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/datagrip.vmoptions";
+    RUSTROVER_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/rustrover.vmoptions";
+    RIDER_VM_OPTIONS = "/home/gujial/jetbra/vmoptions/rider.vmoptions";
   };
 
   home.packages = with pkgs; [
-    tmux
     fastfetch
     gimp
-    wechat
+    wechat-uos
     obs-studio
     qq
     mpv
@@ -58,29 +56,37 @@
     android-studio
     prismlauncher
     ventoy-full-qt
-    projectlibre
     piper
     fluent-reader
-    nixfmt-rfc-style
+    nixfmt
     nur.repos.xddxdd.dingtalk
     wemeet
     qbittorrent
     blesh
-    wpsoffice-cn
     splayer
     darktable
     scanmem
-    signal-desktop
-    postman
-    uv
+    chromium
+    yt-dlp
+    scrcpy
+    ffmpeg
+    statix
+    feishu
+    python3
+    conda
+    wpsoffice-cn
+    traceroute
+    android-tools
+    godot
+    firefox-bin
 
     jetbrains.clion
     jetbrains.goland
     jetbrains.rust-rover
     jetbrains.datagrip
     jetbrains.rider
-    jetbrains.pycharm-professional
-    jetbrains.idea-ultimate
+    jetbrains.pycharm
+    jetbrains.idea
 
     kdePackages.spectacle
     kdePackages.kdenlive
@@ -93,18 +99,13 @@
     kdePackages.krecorder
     kdePackages.kwave
     supergfxctl-plasmoid
-    kdePackages.discover
     kdiff3
     kdePackages.sweeper
     kdePackages.ksystemlog
     kdePackages.sddm-kcm
+    kdePackages.kpat
+    kdePackages.discover
   ];
-
-  imports = [
-    inputs.zen-browser.homeModules.twilight
-  ];
-
-  programs.zen-browser.enable = true;
 
   # git 相关配置
   programs.git = {
@@ -113,6 +114,7 @@
     settings.user.email = "gu18647403665@outlook.com";
     signing.key = "DDC9F70191CA14A3";
     signing.signByDefault = true;
+    lfs.enable = true;
   };
 
   programs.bash = {

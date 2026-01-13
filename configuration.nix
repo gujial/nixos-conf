@@ -20,8 +20,13 @@
   hardware.bluetooth.enable = true;
 
   hardware.graphics.enable = true;
-  hardware.nvidia.open = true;
+  hardware.nvidia.open = false;
   hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
+  # Regular Docker
+  virtualisation.docker.daemon.settings.features.cdi = true;
+  # Rootless
+  virtualisation.docker.rootless.daemon.settings.features.cdi = true;
 
   hardware.nvidia.prime = {
     offload = {
@@ -66,7 +71,7 @@
   networking.networkmanager.enable = true;
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 25565 ];
+    allowedTCPPorts = [ 25565 7897 ];
     trustedInterfaces = [ "Mihomo" ];
     checkReversePath = false;
   };
@@ -129,7 +134,6 @@
   environment.systemPackages = with pkgs; [
     wget
     gnupg
-    conda
     git
     unrar_6
     nvtopPackages.nvidia
@@ -142,7 +146,6 @@
     xsettingsd
     pinentry-curses
     usbutils
-    python3
     quota
     rclone
   ];
@@ -168,11 +171,6 @@
       wayland.enable = true;
       enableHidpi = true;
       autoNumlock = true;
-      settings = {
-        CompositorCommand = {
-          Exec = "kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1";
-        };
-      };
     };
   };
 
@@ -183,7 +181,6 @@
   programs.clash-verge.autoStart = true;
   programs.clash-verge.serviceMode = true;
   programs.gamemode.enable = true;
-  programs.adb.enable = true;
   programs.kde-pim = {
     enable = true;
     kmail = true;
@@ -205,6 +202,13 @@
     };
   };
 
+  services.sunshine = {
+    enable = true;
+    autoStart = false;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     libadwaita
@@ -220,13 +224,15 @@
     libGL
     stdenv.cc.cc.lib
     graphene
+    wayland
+    libxkbcommon
+    libxshmfence
   ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowBroken = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-qt5-1.1.07"
+    "ventoy-qt5-1.1.10"
     "openssl-1.1.1w"
     "mbedtls-2.28.10"
   ];
@@ -236,18 +242,24 @@
 
   services.asusd.enable = true;
   services.fwupd.enable = true;
-  services.ollama = {
-    enable = true;
-    loadModels = [
-      "llama3.2:3b"
-      "deepseek-r1:1.5b"
-    ];
-    acceleration = "cuda";
-  };
+#   services.ollama = {
+#     enable = true;
+#     loadModels = [
+#       "deepseek-r1:1.5b"
+#       "gpt-oss:20b"
+#     ];
+#     package = pkgs.ollama-cuda;
+#   };
   services.ratbagd.enable = true;
   services.xrdp = {
     defaultWindowManager = "startplasma-x11";
     enable = true;
+    openFirewall = true;
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
 
@@ -262,6 +274,7 @@
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
       wqy_zenhei
+      wqy_microhei
       hack-font
       source-code-pro
       jetbrains-mono
