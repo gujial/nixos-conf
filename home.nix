@@ -55,7 +55,6 @@
       ventoy-full-qt
       piper
       fluent-reader
-      nixfmt
       nur.repos.xddxdd.dingtalk
       wemeet
       splayer
@@ -80,6 +79,7 @@
       jetbrains.idea
       cutter
       github-copilot-cli
+      tmux
 
       kdePackages.spectacle
       kdePackages.kcalc
@@ -87,12 +87,10 @@
       kdePackages.isoimagewriter
       kdePackages.kmousetool
       kdePackages.kdenlive
-      okteta
       kdePackages.kamoso
       kdePackages.krecorder
       kdePackages.kwave
       supergfxctl-plasmoid
-      kdiff3
       kdePackages.sweeper
       kdePackages.ksystemlog
       kdePackages.sddm-kcm
