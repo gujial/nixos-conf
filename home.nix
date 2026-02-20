@@ -21,6 +21,6 @@
   home = {
     username = "gujial";
     homeDirectory = "/home/gujial";
-    stateVersion = "25.05";
+    stateVersion = "26.05";
   };
 }
