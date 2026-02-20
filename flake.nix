@@ -114,10 +114,8 @@
                 ];
 
                 environment.systemPackages = [
-                  re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
-                  wechat-devtools.packages.${pkgs.stdenv.hostPlatform.system}.default
                   txdedit.packages.${pkgs.stdenv.hostPlatform.system}.default
                 ];
               }
