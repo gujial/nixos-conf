@@ -10,7 +10,7 @@
     # 字体
     font = {
       name = "JetBrains Mono";
-      size = 13;
+      size = 11;
     };
 
     # 主题（需在 themeFile 中选择，或直接用内置主题名）
@@ -20,7 +20,10 @@
     # 终端设置
     settings = {
       # 透明度（0.0 - 1.0）
-      background_opacity = "0.6";
+      background_opacity = "0.7";
+
+      # 模糊度
+      background_blur = "30";
 
       # 关闭确认对话框（0 = 不确认）
       confirm_os_window_close = 0;

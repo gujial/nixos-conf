@@ -76,7 +76,7 @@
                 extraSpecialArgs = { inherit inputs; };
                 users.gujial = import ./home.nix;
                 sharedModules = [
-                  plasma-manager.homeManagerModules.plasma-manager
+                  plasma-manager.homeModules.plasma-manager
                 ];
               };
               nixpkgs.overlays = [ nur.overlays.default ];

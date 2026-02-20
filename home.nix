@@ -5,8 +5,6 @@
 # kitty.nix 使用内置 Home Manager programs.kitty 模块
 
 {
-  pkgs,
-  inputs,
   ...
 }:
 
@@ -26,5 +24,3 @@
     stateVersion = "25.05";
   };
 }
-
-

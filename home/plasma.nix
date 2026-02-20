@@ -12,11 +12,9 @@
       # 桌面主题
       theme = "breeze-dark";
       # 光标主题
-      cursorTheme = "breeze_cursors";
+      cursor.theme = "breeze_cursors";
       # 图标主题
       iconTheme = "breeze-dark";
-      # 壁纸插件（slideshow / image）
-      wallpaperPlugin = "org.kde.image";
       # 壁纸图片路径
       wallpaper = "/home/gujial/图片/e080ee89f0b6a8ecb588e0314a3fbc30332857493.jpg";
     };
@@ -53,4 +51,5 @@
     shortcuts = {
       "kitty.desktop"._launch = "Ctrl+Alt+T";
     };
+  };
 }
