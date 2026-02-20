@@ -1,7 +1,7 @@
 # KDE Plasma 用户级设置（由 plasma-manager 管理）
 # 文档：https://github.com/nix-community/plasma-manager
 # 此模块需要在 flake.nix 中引入 plasma-manager.homeManagerModules.plasma-manager
-{ ... }:
+_:
 
 {
   programs.plasma = {

@@ -1,5 +1,5 @@
 # Git 配置
-{ ... }:
+_:
 
 {
   programs.git = {

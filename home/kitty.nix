@@ -1,7 +1,7 @@
 # Kitty 终端模拟器配置
 # 文档：https://sw.kovidgoyal.net/kitty/conf/
 # Home Manager 选项：https://nix-community.github.io/home-manager/options.xhtml#opt-programs.kitty.enable
-{ ... }:
+_:
 
 {
   programs.kitty = {

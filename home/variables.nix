@@ -1,5 +1,5 @@
 # 用户会话环境变量
-{ ... }:
+_:
 
 {
   home.sessionVariables = {

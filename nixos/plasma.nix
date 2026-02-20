@@ -1,5 +1,5 @@
 # KDE Plasma 桌面环境系统级配置（SDDM + Plasma 6）
-{ ... }:
+_:
 
 {
   services = {

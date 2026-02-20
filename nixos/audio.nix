@@ -1,5 +1,5 @@
 # 音频配置（PipeWire）
-{ ... }:
+_:
 
 {
   security.rtkit.enable = true;

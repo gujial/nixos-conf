@@ -1,5 +1,5 @@
 # 网络、防火墙与代理配置
-{ ... }:
+_:
 
 {
   networking = {
@@ -10,7 +10,7 @@
       enable = true;
       allowedTCPPorts = [
         25565 # Minecraft
-        7897  # Mihomo/代理
+        7897 # Mihomo/代理
       ];
       trustedInterfaces = [ "Mihomo" ];
       checkReversePath = false;
