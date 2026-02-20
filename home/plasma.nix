@@ -50,6 +50,8 @@ _:
     # ── 快捷键 ─────────────────────────────────────────────────
     shortcuts = {
       "kitty.desktop"._launch = "Ctrl+Alt+T";
+      "Window Maximize"._toggle = "Meta+Up";
+      "Window Minimize"._toggle = "Meta+Down";
     };
   };
 }
