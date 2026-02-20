@@ -80,6 +80,7 @@
       cutter
       github-copilot-cli
       tmux
+      kitty
 
       kdePackages.spectacle
       kdePackages.kcalc
