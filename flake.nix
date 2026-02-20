@@ -40,6 +40,12 @@
 
     wechat-devtools.url = "github:MaikoTan/wechat-devtools";
     txdedit.url = "github:gujial/txdedit";
+
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
@@ -53,6 +59,7 @@
       wechat-devtools,
       txdedit,
       lazyvim-flake,
+      plasma-manager,
       ...
     }:
     {
@@ -68,6 +75,9 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.gujial = import ./home.nix;
+                sharedModules = [
+                  plasma-manager.homeManagerModules.plasma-manager
+                ];
               };
               nixpkgs.overlays = [ nur.overlays.default ];
             }
