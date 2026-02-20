@@ -38,13 +38,14 @@
     scrcpy
     tmux
     statix
+    scanmem
+    emacs
 
     # 多媒体
     darktable
     splayer
     yt-dlp
     ffmpeg
-    scanmem
 
     # 系统工具
     piper
