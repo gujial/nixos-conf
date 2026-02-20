@@ -1,5 +1,5 @@
 # KDE Plasma 桌面环境系统级配置（SDDM + Plasma 6）
-_:
+{ pkgs, ... }:
 
 {
   services = {
@@ -28,4 +28,8 @@ _:
       autoNumlock = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    kdePackages.discover
+  ];
 }

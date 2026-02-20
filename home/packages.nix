@@ -70,6 +70,5 @@
     kdePackages.ksystemlog
     kdePackages.sddm-kcm
     kdePackages.kpat
-    kdePackages.discover
   ];
 }
