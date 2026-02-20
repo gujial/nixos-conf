@@ -46,6 +46,7 @@
     splayer
     yt-dlp
     ffmpeg
+    scanmem
 
     # 系统工具
     piper
