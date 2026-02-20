@@ -38,11 +38,16 @@
       copy_on_select = "no";
 
       # Tab 栏样式
+      tab_bar_edge = "top";
       tab_bar_style = "powerline";
       tab_powerline_style = "slanted";
 
       # 使用 Wayland 协议
       linux_display_server = "wayland";
+
+      remember_window_size = "no";
+      initial_window_width = 1280;
+      initial_window_height = 720;
     };
 
     # Shell 集成（自动与 zsh 集成，提供 jump、clone-in-kitty 等功能）
