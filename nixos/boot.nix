@@ -8,7 +8,9 @@
     loader.efi.canTouchEfiVariables = true;
 
     kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [ "hid_apple.fnmode=2" ];
+    kernelParams = [
+      "hid_apple.fnmode=2"
+    ];
 
     extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
     extraModprobeConfig = ''

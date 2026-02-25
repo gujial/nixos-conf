@@ -9,12 +9,12 @@
       drivers = [ pkgs.hplipWithPlugin ];
     };
 
-    sunshine = {
-      enable = true;
-      autoStart = false;
-      capSysAdmin = true;
-      openFirewall = true;
-    };
+    # sunshine = {
+    #  enable = true;
+    #  autoStart = false;
+    #  capSysAdmin = true;
+    #  openFirewall = true;
+    # };
 
     asusd.enable = true;
     fwupd.enable = true;

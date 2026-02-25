@@ -33,13 +33,14 @@
     godot
     github-copilot-cli
     cutter
-    jadx
+    # jadx
     android-tools
     scrcpy
     tmux
     statix
     scanmem
     emacs
+    qtcreator
 
     # 多媒体
     darktable

@@ -12,7 +12,7 @@
       fira-code
       hack-font
       source-code-pro
-      jetbrains-mono
+      # jetbrains-mono
       wqy_zenhei
       wqy_microhei
     ];

@@ -11,6 +11,7 @@ _:
       allowedTCPPorts = [
         25565 # Minecraft
         7897 # Mihomo/代理
+        8888
       ];
       trustedInterfaces = [ "Mihomo" ];
       checkReversePath = false;

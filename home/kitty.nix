@@ -9,7 +9,7 @@ _:
 
     # 字体
     font = {
-      name = "JetBrains Mono";
+      name = "hack";
       size = 11;
     };
 
