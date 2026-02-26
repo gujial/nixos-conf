@@ -13,7 +13,10 @@ _:
         7897 # Mihomo/代理
         8888
       ];
-      trustedInterfaces = [ "Mihomo" ];
+      trustedInterfaces = [
+        "Mihomo"
+        "waydroid0"
+      ];
       checkReversePath = false;
     };
   };
