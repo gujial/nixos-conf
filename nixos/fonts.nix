@@ -15,28 +15,37 @@
       # jetbrains-mono
       wqy_zenhei
       wqy_microhei
+      corefonts
     ];
 
+    fontDir.enable = true;
+
     fontconfig = {
-      antialias = true;
-      hinting.enable = true;
+      enable = true;
       defaultFonts = {
-        emoji = [ "Noto Color Emoji" ];
+        # 等宽字体 (终端/编辑器用)
         monospace = [
+          "FiraCode Nerd Font Mono"
           "Noto Sans Mono CJK SC"
-          "Sarasa Mono SC"
           "DejaVu Sans Mono"
         ];
+
+        # 无衬线字体 (系统界面/网页主要用)
         sansSerif = [
           "Noto Sans CJK SC"
-          "Source Han Sans SC"
+          "WenQuanYi Micro Hei"
           "DejaVu Sans"
         ];
+
+        # 衬线字体 (文档/阅读用)
         serif = [
           "Noto Serif CJK SC"
-          "Source Han Serif SC"
+          "WenQuanYi Zen Hei Sharp"
           "DejaVu Serif"
         ];
+
+        # Emoji 字体
+        emoji = [ "Noto Color Emoji" ];
       };
     };
   };

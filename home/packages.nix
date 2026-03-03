@@ -41,6 +41,8 @@
     scanmem
     emacs
     qtcreator
+    unityhub
+    nodejs
 
     # 多媒体
     darktable
