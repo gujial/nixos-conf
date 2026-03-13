@@ -31,5 +31,9 @@
       nssmdns4 = true;
       openFirewall = true;
     };
+
+    envfs.enable = true;
+
+    sing-box.enable = true;
   };
 }

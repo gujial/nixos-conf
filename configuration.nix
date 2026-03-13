@@ -30,8 +30,16 @@
         "flakes"
       ];
 
+      auto-optimise-store = true;
+
       trusted-substituters = [ "https://ai.cachix.org" ];
       trusted-public-keys = [ "ai.cachix.org-1:N9dzRK+alWwoKXQlnn0H6aUx0lU/mspIoz8hMvGvbbc=" ];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
     };
   };
 

@@ -42,8 +42,9 @@
         vhostUserPackages = [ pkgs.virtiofsd ];
       };
     };
+
     waydroid = {
-      enable = false;
+      enable = true;
       package = pkgs.waydroid-nftables;
     };
   };

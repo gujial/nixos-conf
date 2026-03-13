@@ -29,4 +29,8 @@
       ];
     };
   };
+
+  environment.sessionVariables = {
+    QT_IM_MODULES = "wayland;fcitx";
+  };
 }

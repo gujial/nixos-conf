@@ -46,6 +46,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    browser-previews = {
+      url = "github:nix-community/browser-previews";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -60,6 +65,7 @@
       txdedit,
       lazyvim-flake,
       plasma-manager,
+      browser-previews,
       ...
     }:
     {
@@ -118,6 +124,7 @@
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
                   txdedit.packages.${pkgs.stdenv.hostPlatform.system}.default
                   wechat-devtools.packages.${pkgs.stdenv.hostPlatform.system}.default
+                  browser-previews.packages.${pkgs.stdenv.hostPlatform.system}.google-chrome
                 ];
               }
             )

@@ -13,8 +13,6 @@
     telegram-desktop
     obsidian
     fluent-reader
-    chromium
-    firefox-bin
     feishu
     wpsoffice-cn
 
@@ -43,6 +41,7 @@
     qtcreator
     unityhub
     nodejs
+    conda
 
     # 多媒体
     darktable
@@ -56,11 +55,12 @@
     ventoy-full-qt
     traceroute
     wemeet
-    nur.repos.xddxdd.dingtalk
+    # nur.repos.xddxdd.dingtalk
 
     # KDE 应用
     kdePackages.spectacle
     kdePackages.kcalc
+    kdePackages.krdc
     kdePackages.filelight
     kdePackages.isoimagewriter
     kdePackages.kmousetool
