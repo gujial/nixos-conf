@@ -6,7 +6,7 @@
     wget
     gnupg
     git
-    unrar_6
+    unrar
     nvtopPackages.nvidia
     noto-fonts
     fira-code

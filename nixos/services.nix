@@ -33,7 +33,5 @@
     };
 
     envfs.enable = true;
-
-    sing-box.enable = true;
   };
 }

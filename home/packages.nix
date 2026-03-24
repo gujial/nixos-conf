@@ -39,7 +39,17 @@
     scanmem
     emacs
     qtcreator
-    unityhub
+
+    (pkgs.unityhub.override {
+      extraLibs =
+        pkgs: with pkgs; [
+          fcitx5-gtk
+          noto-fonts-cjk-sans
+          wqy_zenhei
+          sarasa-gothic
+        ];
+    })
+
     nodejs
     conda
 

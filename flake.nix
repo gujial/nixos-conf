@@ -51,6 +51,8 @@
       url = "github:nix-community/browser-previews";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixpkgs-clash-verge.url = "github:NixOS/nixpkgs/6da45c91d53dc318df7482a0be7c7bf47515e1e2";
   };
 
   outputs =
@@ -71,6 +73,7 @@
     {
       nixosConfigurations = {
         laptop-gu = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
 
@@ -123,7 +126,7 @@
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
                   txdedit.packages.${pkgs.stdenv.hostPlatform.system}.default
-                  wechat-devtools.packages.${pkgs.stdenv.hostPlatform.system}.default
+                  # wechat-devtools.packages.${pkgs.stdenv.hostPlatform.system}.default
                   browser-previews.packages.${pkgs.stdenv.hostPlatform.system}.google-chrome
                 ];
               }
