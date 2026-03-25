@@ -38,9 +38,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wechat-devtools.url = "github:MaikoTan/wechat-devtools";
-    txdedit.url = "github:gujial/txdedit";
-
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -63,8 +60,6 @@
       nur,
       re3-flake,
       tinyMediaManager-flake,
-      wechat-devtools,
-      txdedit,
       lazyvim-flake,
       plasma-manager,
       browser-previews,
@@ -125,8 +120,6 @@
                 environment.systemPackages = [
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
-                  txdedit.packages.${pkgs.stdenv.hostPlatform.system}.default
-                  # wechat-devtools.packages.${pkgs.stdenv.hostPlatform.system}.default
                   browser-previews.packages.${pkgs.stdenv.hostPlatform.system}.google-chrome
                 ];
               }

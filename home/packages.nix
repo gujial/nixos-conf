@@ -31,7 +31,7 @@
     godot
     github-copilot-cli
     cutter
-    # jadx
+    dotnet-sdk_10
     android-tools
     scrcpy
     tmux
@@ -39,6 +39,8 @@
     scanmem
     emacs
     qtcreator
+
+    (callPackage ./nvimunity.nix { })
 
     (pkgs.unityhub.override {
       extraLibs =
