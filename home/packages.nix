@@ -40,7 +40,7 @@
     emacs
     qtcreator
 
-    (callPackage ./nvimunity.nix { })
+    (callPackage ../nvimunity/nvimunity.nix { })
 
     (pkgs.unityhub.override {
       extraLibs =
