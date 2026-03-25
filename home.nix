@@ -16,6 +16,7 @@
     ./home/vscode.nix
     ./home/kitty.nix
     ./home/plasma.nix
+    ./home/programs.nix
   ];
 
   home = {
