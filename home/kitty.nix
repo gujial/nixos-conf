@@ -48,6 +48,8 @@ _:
       remember_window_size = "no";
       initial_window_width = 1280;
       initial_window_height = 720;
+
+      cursor_trail = 1;
     };
 
     # Shell 集成（自动与 zsh 集成，提供 jump、clone-in-kitty 等功能）

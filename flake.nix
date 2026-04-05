@@ -49,6 +49,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    pfte-flake = {
+      url = "github:gujial/pfte-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs-clash-verge.url = "github:NixOS/nixpkgs/6da45c91d53dc318df7482a0be7c7bf47515e1e2";
   };
 
@@ -63,6 +68,7 @@
       lazyvim-flake,
       plasma-manager,
       browser-previews,
+      pfte-flake,
       ...
     }:
     {
@@ -121,6 +127,7 @@
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
                   browser-previews.packages.${pkgs.stdenv.hostPlatform.system}.google-chrome
+                  pfte-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
                 ];
               }
             )

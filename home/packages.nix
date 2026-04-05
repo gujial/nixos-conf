@@ -67,7 +67,6 @@
     ventoy-full-qt
     traceroute
     wemeet
-    # nur.repos.xddxdd.dingtalk
 
     # KDE 应用
     kdePackages.spectacle
