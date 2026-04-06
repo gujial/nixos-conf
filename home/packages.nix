@@ -34,7 +34,6 @@
     dotnet-sdk_10
     android-tools
     scrcpy
-    tmux
     statix
     scanmem
     emacs

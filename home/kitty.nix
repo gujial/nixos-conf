@@ -59,15 +59,6 @@ _:
     keybindings = {
       # 新标签页
       "ctrl+t" = "new_tab_with_cwd";
-      # 水平分割
-      "ctrl+shift+minus" = "launch --location=hsplit --cwd=current";
-      # 垂直分割
-      "ctrl+shift+backslash" = "launch --location=vsplit --cwd=current";
-      # 窗格导航
-      "ctrl+shift+h" = "neighboring_window left";
-      "ctrl+shift+l" = "neighboring_window right";
-      "ctrl+shift+k" = "neighboring_window top";
-      "ctrl+shift+j" = "neighboring_window bottom";
     };
   };
 }
