@@ -8,14 +8,6 @@
     plugins = with pkgs.tmuxPlugins; [
       sensible
       yank
-      resurrect
-      {
-        plugin = continuum;
-        extraConfig = ''
-          set -g @continuum-restore 'off'
-          set -g @continuum-save-interval '10'
-        '';
-      }
       {
         plugin = catppuccin;
         extraConfig = ''
