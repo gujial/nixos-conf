@@ -248,11 +248,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1775390926,
-        "narHash": "sha256-4i0+OdFt3pM/AaWstm1m9G9aWmGS/fiEx0qFy0qVLoA=",
+        "lastModified": 1775459293,
+        "narHash": "sha256-B0EwKFZ/HD+eFxWw9dUBDVywDNLiGhA6GZa26QrWPnw=",
         "owner": "gujial",
         "repo": "lazyvim-nix",
-        "rev": "44a650f0e34d2e1ad3a5c2b1d9482bc7830e4715",
+        "rev": "a34ddb206ebdad23d55551e91af450f054b05682",
         "type": "github"
       },
       "original": {

@@ -13,29 +13,28 @@ _:
       size = 11;
     };
 
-    # 主题（需在 themeFile 中选择，或直接用内置主题名）
     # 可通过 `kitty +kitten themes` 浏览所有主题
-    themeFile = "Ghostty_Default"; # 使用 Ghostty Default 主题
+    themeFile = "Catppuccin-Mocha";
 
     # 终端设置
     settings = {
       # 透明度（0.0 - 1.0）
-      background_opacity = "0.7";
+      # background_opacity = "0.7";
 
       # 模糊度
-      background_blur = "30";
+      # background_blur = "30";
 
       # 关闭确认对话框（0 = 不确认）
       confirm_os_window_close = 0;
 
       # 禁用系统提示音
-      enable_audio_bell = false;
+      enable_audio_bell = true;
 
       # 滚动缓冲区行数
       scrollback_lines = 10000;
 
       # 选中文字自动复制到剪贴板
-      copy_on_select = "no";
+      copy_on_select = "yes";
 
       # Tab 栏样式
       tab_bar_edge = "top";

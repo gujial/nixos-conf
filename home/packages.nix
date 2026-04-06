@@ -38,6 +38,7 @@
     scanmem
     emacs
     qtcreator
+    file
 
     (callPackage ../nvimunity/nvimunity.nix { })
 
