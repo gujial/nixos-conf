@@ -12,6 +12,7 @@ _:
         25565 # Minecraft
         7897 # Mihomo/代理
         5244
+        22
       ];
       trustedInterfaces = [
         "Mihomo"

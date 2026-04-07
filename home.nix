@@ -18,7 +18,7 @@
     ./home/tmux.nix
     ./home/plasma.nix
     ./home/programs.nix
-    # ./home/hyprland.nix
+    # ./home/hyprland
   ];
 
   home = {

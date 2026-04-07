@@ -20,7 +20,6 @@
     ./nixos/services.nix
     ./nixos/plasma.nix
     ./nixos/packages.nix
-    # ./nixos/hyprland.nix
   ];
 
   nix = {
