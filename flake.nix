@@ -59,7 +59,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-clash-verge.url = "github:NixOS/nixpkgs/6da45c91d53dc318df7482a0be7c7bf47515e1e2";
     catppuccin.url = "github:catppuccin/nix/release-25.11";
   };
 

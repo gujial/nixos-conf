@@ -360,22 +360,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-clash-verge": {
-      "locked": {
-        "lastModified": 1774264777,
-        "narHash": "sha256-p+qNITjbn8HO9v1aZjs+VYAH2WxYGPI6h7Uqi8JX31M=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6da45c91d53dc318df7482a0be7c7bf47515e1e2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "6da45c91d53dc318df7482a0be7c7bf47515e1e2",
-        "type": "github"
-      }
-    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1775036866,
@@ -927,7 +911,6 @@
         "lanzaboote": "lanzaboote",
         "lazyvim-flake": "lazyvim-flake",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-clash-verge": "nixpkgs-clash-verge",
         "noctalia": "noctalia",
         "nur": "nur",
         "pfte-flake": "pfte-flake",

@@ -1,5 +1,5 @@
 # 系统级程序配置
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   programs = {
@@ -28,8 +28,8 @@
       enable = true;
       autoStart = true;
       serviceMode = true;
-      package =
-        inputs.nixpkgs-clash-verge.legacyPackages.${pkgs.stdenv.hostPlatform.system}.clash-verge-rev;
+      # package =
+      #   inputs.nixpkgs-clash-verge.legacyPackages.${pkgs.stdenv.hostPlatform.system}.clash-verge-rev;
     };
 
     gamemode.enable = true;
