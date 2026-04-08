@@ -40,7 +40,7 @@
     qtcreator
     file
 
-    (callPackage ../nvimunity/nvimunity.nix { })
+    (callPackage ./nvimunity/nvimunity.nix { })
 
     (pkgs.unityhub.override {
       extraLibs =
