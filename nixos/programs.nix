@@ -89,5 +89,6 @@
     #   withUWSM = true;
     #   xwayland.enable = true;
     # };
+    # niri.enable = true;
   };
 }

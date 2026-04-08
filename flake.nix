@@ -54,7 +54,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs-clash-verge.url = "github:NixOS/nixpkgs/6da45c91d53dc318df7482a0be7c7bf47515e1e2";
+    catppuccin.url = "github:catppuccin/nix/release-25.11";
   };
 
   outputs =
@@ -69,6 +75,8 @@
       plasma-manager,
       browser-previews,
       pfte-flake,
+      catppuccin,
+      noctalia,
       ...
     }:
     {
@@ -87,6 +95,8 @@
                 users.gujial = import ./home.nix;
                 sharedModules = [
                   plasma-manager.homeModules.plasma-manager
+                  catppuccin.homeModules.catppuccin
+                  noctalia.homeModules.default
                 ];
               };
               nixpkgs.overlays = [ nur.overlays.default ];

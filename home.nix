@@ -19,6 +19,8 @@
     ./home/plasma.nix
     ./home/programs.nix
     # ./home/hyprland
+    # ./home/niri
+    # ./home/noctalia
   ];
 
   home = {
