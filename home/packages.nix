@@ -36,7 +36,6 @@
     scrcpy
     statix
     scanmem
-    emacs
     qtcreator
     file
 

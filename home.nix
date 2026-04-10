@@ -18,6 +18,7 @@
     ./home/tmux.nix
     ./home/plasma.nix
     ./home/programs.nix
+    ./home/emacs
     # ./home/hyprland
     # ./home/niri
     # ./home/noctalia
