@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
     # 日常应用
     fastfetch
-    gimp
+    krita
     wechat-uos
     obs-studio
     qq

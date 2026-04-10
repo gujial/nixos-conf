@@ -27,7 +27,7 @@ _:
       # 关闭确认对话框（0 = 不确认）
       confirm_os_window_close = 0;
 
-      # 禁用系统提示音
+      # 系统提示音
       enable_audio_bell = true;
 
       # 滚动缓冲区行数
@@ -56,8 +56,6 @@ _:
 
     # 快捷键映射
     keybindings = {
-      # 新标签页
-      "ctrl+t" = "new_tab_with_cwd";
     };
   };
 }
