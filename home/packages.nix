@@ -6,15 +6,15 @@
     # 日常应用
     fastfetch
     krita
-    wechat-uos
-    obs-studio
-    qq
+    wechat
+    # qq
     mpv
     telegram-desktop
     obsidian
     fluent-reader
     feishu
     wpsoffice-cn
+    element-desktop
 
     # 游戏
     adwsteamgtk
@@ -25,6 +25,7 @@
     # 开发工具
     android-studio
     jetbrains.idea
+    jetbrains.datagrip
     python3
     gcc
     gdb
@@ -83,5 +84,6 @@
     kdePackages.ksystemlog
     kdePackages.sddm-kcm
     kdePackages.kpat
+    kdePackages.neochat
   ];
 }

@@ -80,7 +80,14 @@
         libxkbcommon
         libxshmfence
         pipewire
+        icu
       ];
+    };
+
+    weylus = {
+      enable = true;
+      openFirewall = true;
+      users = [ "gujial" ];
     };
 
     virt-manager.enable = true;

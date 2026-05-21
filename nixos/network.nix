@@ -14,6 +14,9 @@ _:
         5244
         22
       ];
+      allowedUDPPorts = [
+        43593
+      ];
       trustedInterfaces = [
         "Mihomo"
         "waydroid0"

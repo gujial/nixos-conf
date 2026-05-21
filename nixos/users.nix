@@ -13,6 +13,9 @@
       "gamemode"
       "adbusers"
       "libvirtd"
+      "kvm"
+      "video"
+      "render"
     ];
   };
 }

@@ -46,9 +46,10 @@
   nixpkgs = {
     config.allowUnfree = true;
     config.permittedInsecurePackages = [
-      "ventoy-qt5-1.1.10"
+      "ventoy-qt5-1.1.12"
       "openssl-1.1.1w"
       "mbedtls-2.28.10"
+      "olm-3.2.16"
     ];
   };
 
