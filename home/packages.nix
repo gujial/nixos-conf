@@ -5,15 +5,15 @@
   home.packages = with pkgs; [
     # 日常应用
     fastfetch
-    krita
     wechat
-    # qq
+    qq
     mpv
     telegram-desktop
     obsidian
     fluent-reader
     feishu
-    wpsoffice-cn
+    # wpsoffice-cn
+    libreoffice
     element-desktop
 
     # 游戏
@@ -61,6 +61,7 @@
     yt-dlp
     ffmpeg
     scanmem
+    gimp
 
     # 系统工具
     piper
@@ -85,5 +86,10 @@
     kdePackages.sddm-kcm
     kdePackages.kpat
     kdePackages.neochat
+    kdePackages.korganizer
+    kdePackages.akonadi-calendar
+    okteta
+    labplot
+    krita
   ];
 }

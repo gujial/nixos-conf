@@ -31,5 +31,6 @@
 
   environment.systemPackages = with pkgs; [
     kdePackages.discover
+    kdePackages.kdepim-addons
   ];
 }
