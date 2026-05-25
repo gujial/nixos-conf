@@ -2,15 +2,10 @@
 { pkgs, ... }:
 
 let
-  tegakiZatsu = pkgs.stdenvNoCC.mkDerivation {
-    pname = "tegaki-zatsu-font";
-    version = "1.0";
-    src = ../assets/fonts/tegaki_zatsu_normal.ttf;
-    dontUnpack = true;
-    installPhase = ''
-      install -Dm644 $src $out/share/fonts/truetype/tegaki_zatsu_normal.ttf
-    '';
-  };
+  localAssetFonts = pkgs.runCommandLocal "local-asset-fonts" { } ''
+    mkdir -p $out/share/fonts/truetype
+    cp -r ${../assets/fonts}/. $out/share/fonts/truetype/
+  '';
 in
 {
   fonts = {
@@ -28,7 +23,7 @@ in
       wqy_zenhei
       wqy_microhei
       corefonts
-      tegakiZatsu
+      localAssetFonts
     ];
 
     fontDir.enable = true;
