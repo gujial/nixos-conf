@@ -5,8 +5,8 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs30;
-    extraPackages = epkgs:
-      with epkgs; [
+    extraPackages =
+      epkgs: with epkgs; [
         # 补全框架
         vertico
         orderless
@@ -65,21 +65,23 @@
         copilot-chat
       ];
   };
+  home = {
 
-  home.packages = with pkgs; [
+    packages = with pkgs; [
       # Language Servers
-        pyright
-        clang-tools
-        rust-analyzer
-        jdt-language-server
-        typescript-language-server
-        nil
-        gopls
-        csharp-ls
-  ];
+      pyright
+      clang-tools
+      rust-analyzer
+      jdt-language-server
+      typescript-language-server
+      nil
+      gopls
+      csharp-ls
+    ];
 
-  # 将 init.el 链接到 ~/.emacs.d/init.el
-  home.file.".emacs.d/init.el".source = ./init.el;
-  # 提前创建 early-init.el
-  home.file.".emacs.d/early-init.el".source = ./early-init.el;
+    # 将 init.el 链接到 ~/.emacs.d/init.el
+    file.".emacs.d/init.el".source = ./init.el;
+    # 提前创建 early-init.el
+    file.".emacs.d/early-init.el".source = ./early-init.el;
+  };
 }
