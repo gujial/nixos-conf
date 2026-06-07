@@ -7,7 +7,7 @@ _:
     networkmanager.enable = true;
 
     firewall = {
-      enable = true;
+      enable = false;
       allowedTCPPorts = [
         25565 # Minecraft
         7897 # Mihomo/代理

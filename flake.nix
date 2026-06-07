@@ -35,7 +35,6 @@
 
     lazyvim-flake = {
       url = "github:gujial/lazyvim-nix";
-      inputs.nixpkgs.url = "nixpkgs";
     };
 
     plasma-manager = {

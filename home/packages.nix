@@ -6,15 +6,14 @@
     # 日常应用
     fastfetch
     wechat
-    qq
     mpv
     telegram-desktop
     obsidian
-    fluent-reader
     feishu
-    # wpsoffice-cn
     libreoffice
-    element-desktop
+    bitwarden-desktop
+    nur.repos.xddxdd.dingtalk
+    nur.repos.xddxdd.baidunetdisk
 
     # 游戏
     adwsteamgtk
@@ -23,6 +22,7 @@
     protonplus
 
     # 开发工具
+    xxd
     android-studio
     jetbrains.idea
     jetbrains.datagrip

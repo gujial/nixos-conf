@@ -57,13 +57,14 @@
     };
 
     "/mnt/repos" = {
-      device = "/dev/disk/by-uuid/1977eb75-53cd-4206-a678-3f73b08dfb35";
-      fsType = "ext4";
+      device = "/dev/disk/by-uuid/6B93DB84903E2AC7";
+      fsType = "ntfs";
       options = [
-        "user"
+        "defaults"
         "nofail"
-        "rw"
-        "exec"
+        "uid=1000"
+        "gid=1000"
+        "umask=000"
       ];
     };
   };

@@ -50,6 +50,7 @@
       "openssl-1.1.1w"
       "mbedtls-2.28.10"
       "olm-3.2.16"
+      "electron-39.8.10"
     ];
   };
 
