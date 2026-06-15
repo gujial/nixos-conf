@@ -49,6 +49,7 @@ _:
       initial_window_height = 720;
 
       cursor_trail = 1;
+      auto_reload_config = -1;
     };
 
     # Shell 集成（自动与 zsh 集成，提供 jump、clone-in-kitty 等功能）

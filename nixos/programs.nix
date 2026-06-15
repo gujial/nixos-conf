@@ -81,6 +81,9 @@
         libxshmfence
         pipewire
         icu
+        libGLU
+        libx11
+        libxext
       ];
     };
 
@@ -91,6 +94,7 @@
     };
 
     virt-manager.enable = true;
+    wireshark.enable = true;
     # hyprland = {
     #   enable = true;
     #   withUWSM = true;

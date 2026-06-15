@@ -14,11 +14,11 @@
     ./home/variables.nix
     ./home/git.nix
     ./home/vscode.nix
-    ./home/kitty.nix
+    # ./home/kitty.nix
     ./home/tmux.nix
     ./home/plasma.nix
     ./home/programs.nix
-    ./home/emacs
+    # ./home/emacs
     # ./home/hyprland
     # ./home/niri
     # ./home/noctalia

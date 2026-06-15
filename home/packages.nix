@@ -12,8 +12,12 @@
     feishu
     libreoffice
     bitwarden-desktop
+    element-desktop
     nur.repos.xddxdd.dingtalk
     nur.repos.xddxdd.baidunetdisk
+    qpwgraph
+    unzip
+    net-tools
 
     # 游戏
     adwsteamgtk
@@ -22,6 +26,8 @@
     protonplus
 
     # 开发工具
+    wireshark
+    github-copilot-cli
     xxd
     android-studio
     jetbrains.idea

@@ -20,6 +20,7 @@ _:
       trustedInterfaces = [
         "Mihomo"
         "waydroid0"
+        "zttqhrscua"
       ];
       checkReversePath = false;
     };

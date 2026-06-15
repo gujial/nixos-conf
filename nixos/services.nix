@@ -23,6 +23,10 @@
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
+      allowInterfaces = [
+        "zttqhrscua"
+        "wlo1"
+      ];
     };
 
     envfs.enable = true;

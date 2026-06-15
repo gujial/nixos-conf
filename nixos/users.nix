@@ -7,6 +7,7 @@
     description = "gujial";
     shell = pkgs.zsh;
     extraGroups = [
+      "wireshark"
       "networkmanager"
       "wheel"
       "docker"
