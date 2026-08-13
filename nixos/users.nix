@@ -17,6 +17,7 @@
       "kvm"
       "video"
       "render"
+      "uinput"
     ];
   };
 }

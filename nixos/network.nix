@@ -6,6 +6,12 @@ _:
     hostName = "laptop-gu";
     networkmanager.enable = true;
 
+    nameservers = [
+      "1.1.1.1"
+      "8.8.8.8"
+      "2001:4860:4860::8888"
+    ];
+
     firewall = {
       enable = false;
       allowedTCPPorts = [

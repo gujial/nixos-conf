@@ -18,14 +18,23 @@
     qpwgraph
     unzip
     net-tools
+    pandoc
+    ntfy-sh
+    thunderbird
+    pinentry-all
+    cisco-packet-tracer_9
 
     # 游戏
     adwsteamgtk
     osu-lazer-bin
     prismlauncher
     protonplus
+    zeroad
 
     # 开发工具
+    proxypin
+    zap
+    jdk
     wireshark
     github-copilot-cli
     xxd
@@ -45,6 +54,9 @@
     scanmem
     qtcreator
     file
+    jadx
+    apktool
+    apksigner
 
     (callPackage ./nvimunity/nvimunity.nix { })
 
@@ -73,7 +85,7 @@
     piper
     ventoy-full-qt
     traceroute
-    wemeet
+    wl-clipboard
 
     # KDE 应用
     kdePackages.spectacle
@@ -94,8 +106,10 @@
     kdePackages.neochat
     kdePackages.korganizer
     kdePackages.akonadi-calendar
+    kdePackages.kunifiedpush
     okteta
     labplot
     krita
+    kdePackages.akregator
   ];
 }

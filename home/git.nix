@@ -9,7 +9,7 @@ _:
     lfs.enable = true;
     settings = {
       user.name = "gujial";
-      user.email = "gu18647403665@outlook.com";
+      user.email = "gujial@gujial.cc";
       safe.directory = "/etc/nixos";
     };
   };

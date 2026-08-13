@@ -29,9 +29,33 @@
       ];
     };
 
+    mihomo = {
+      enable = true;
+      configFile = "/home/gujial/config.yaml";
+      tunMode = true;
+    };
+
+    sunshine = {
+      enable = true;
+      autoStart = false;
+      capSysAdmin = true;
+      openFirewall = true;
+    };
+
     envfs.enable = true;
     openssh.enable = true;
-    # services.gnome.gnome-keyring.enable = true;
-    # security.pam.services.gdm.enableGnomeKeyring = true;
+    # cloudflare-warp.enable = true;
+    # kubo = {
+    #   enable = true;
+    #   settings = {
+    #     Addresses.Gateway = "https://ipfs.gujial.cc";
+    #   };
+    # };
+    # # ntfy-sh = {
+    #   enable = true;
+    #   settings = {
+    #     base-url = "https://api.u266198.nyat.app:16767";
+    #   };
+    # };
   };
 }

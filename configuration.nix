@@ -43,6 +43,10 @@
     };
   };
 
+  security.pki.certificates = [
+    (builtins.readFile assets/ProxyPinCA.crt)
+  ];
+
   nixpkgs = {
     config.allowUnfree = true;
     config.permittedInsecurePackages = [

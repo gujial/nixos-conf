@@ -17,6 +17,9 @@ in
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
+      maple-mono.truetype
+      maple-mono.NF-unhinted
+      maple-mono.NF-CN-unhinted
       fira-code
       hack-font
       source-code-pro
@@ -32,7 +35,7 @@ in
       enable = true;
       defaultFonts = {
         monospace = [
-          "FiraCode Nerd Font Mono"
+          "Maple Mono"
           "Noto Sans Mono CJK SC"
           "DejaVu Sans Mono"
         ];

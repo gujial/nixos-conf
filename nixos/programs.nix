@@ -24,13 +24,11 @@
     direnv.enable = true;
     partition-manager.enable = true;
 
-    clash-verge = {
-      enable = true;
-      autoStart = true;
-      serviceMode = true;
-      # package =
-      #   inputs.nixpkgs-clash-verge.legacyPackages.${pkgs.stdenv.hostPlatform.system}.clash-verge-rev;
-    };
+    # clash-verge = {
+    #   enable = true;
+    # };
+
+    firejail.enable = false;
 
     gamemode.enable = true;
 
