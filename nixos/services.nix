@@ -44,6 +44,7 @@
 
     envfs.enable = true;
     openssh.enable = true;
+    logmein-hamachi.enable = false;
     # cloudflare-warp.enable = true;
     # kubo = {
     #   enable = true;

@@ -13,7 +13,6 @@
     libreoffice
     bitwarden-desktop
     element-desktop
-    nur.repos.xddxdd.dingtalk
     nur.repos.xddxdd.baidunetdisk
     qpwgraph
     unzip
@@ -23,6 +22,8 @@
     thunderbird
     pinentry-all
     cisco-packet-tracer_9
+    haguichi
+    gh
 
     # 游戏
     adwsteamgtk

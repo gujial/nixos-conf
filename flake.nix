@@ -59,6 +59,8 @@
     };
 
     catppuccin.url = "github:catppuccin/nix/release-25.11";
+
+    nix-auth.url = "github:numtide/nix-auth";
   };
 
   outputs =
@@ -75,6 +77,7 @@
       pfte-flake,
       catppuccin,
       noctalia,
+      nix-auth,
       ...
     }:
     {
@@ -133,6 +136,7 @@
                 ];
 
                 environment.systemPackages = [
+                  nix-auth.packages.${pkgs.stdenv.hostPlatform.system}.default
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
                   browser-previews.packages.${pkgs.stdenv.hostPlatform.system}.google-chrome
