@@ -76,7 +76,7 @@
 
     # 多媒体
     darktable
-    splayer
+    splayer-next
     yt-dlp
     ffmpeg
     scanmem

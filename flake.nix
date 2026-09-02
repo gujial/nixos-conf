@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
     # home-manager, used for managing user coniguration
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -61,6 +62,14 @@
     catppuccin.url = "github:catppuccin/nix/release-25.11";
 
     nix-auth.url = "github:numtide/nix-auth";
+
+    claude-desktop = {
+      url = "github:k3d3/claude-desktop-linux-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
+
+    codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
   };
 
   outputs =
@@ -78,6 +87,8 @@
       catppuccin,
       noctalia,
       nix-auth,
+      claude-desktop,
+      codex-desktop-linux,
       ...
     }:
     {
@@ -136,6 +147,9 @@
                 ];
 
                 environment.systemPackages = [
+                  (claude-desktop.packages.${pkgs.stdenv.hostPlatform.system}.claude-desktop.override {
+                    nodePackages = { inherit (pkgs) asar; };
+                  })
                   nix-auth.packages.${pkgs.stdenv.hostPlatform.system}.default
                   re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
                   tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -144,6 +158,8 @@
                 ];
               }
             )
+
+            codex-desktop-linux.nixosModules.default
 
             (
               { pkgs, ... }:

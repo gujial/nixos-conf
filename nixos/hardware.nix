@@ -27,10 +27,17 @@
   };
 
   virtualisation = {
-    docker = {
-      daemon.settings.features.cdi = true;
-      rootless.daemon.settings.features.cdi = true;
+    virtualbox.host.enable = true;
+    virtualbox.host.enableExtensionPack = true;
+    spiceUSBRedirection.enable = true;
+
+    podman = {
       enable = true;
+      dockerCompat = true;
+    };
+
+    containers.registries.settings = {
+      "unqualified-search-registries" = [ "docker.io" ];
     };
 
     libvirtd = {

@@ -93,6 +93,7 @@
 
     virt-manager.enable = true;
     wireshark.enable = true;
+    codexDesktopLinux.enable = true;
     # hyprland = {
     #   enable = true;
     #   withUWSM = true;

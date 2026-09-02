@@ -19,5 +19,6 @@
     usbutils
     quota
     rclone
+    distrobox
   ];
 }
