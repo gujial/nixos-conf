@@ -27,8 +27,6 @@
   };
 
   virtualisation = {
-    virtualbox.host.enable = true;
-    virtualbox.host.enableExtensionPack = true;
     spiceUSBRedirection.enable = true;
 
     podman = {

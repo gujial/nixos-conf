@@ -9,11 +9,8 @@
     mpv
     telegram-desktop
     obsidian
-    feishu
     libreoffice
-    bitwarden-desktop
-    element-desktop
-    nur.repos.xddxdd.baidunetdisk
+    # nur.repos.xddxdd.baidunetdisk
     qpwgraph
     unzip
     net-tools
@@ -21,9 +18,8 @@
     ntfy-sh
     thunderbird
     pinentry-all
-    cisco-packet-tracer_9
-    haguichi
     gh
+    imagemagick
 
     # 游戏
     adwsteamgtk
@@ -33,19 +29,19 @@
     zeroad
 
     # 开发工具
-    proxypin
+    uv
+    minicom
     zap
     jdk
-    wireshark
-    github-copilot-cli
+    codex
     xxd
-    android-studio
-    jetbrains.idea
-    jetbrains.datagrip
+    # android-studio
+    # jetbrains.idea
+    # jetbrains.datagrip
     python3
     gcc
     gdb
-    godot
+    # godot
     github-copilot-cli
     cutter
     dotnet-sdk_10
@@ -53,24 +49,10 @@
     scrcpy
     statix
     scanmem
-    qtcreator
     file
     jadx
     apktool
     apksigner
-
-    (callPackage ./nvimunity/nvimunity.nix { })
-
-    (pkgs.unityhub.override {
-      extraLibs =
-        pkgs: with pkgs; [
-          fcitx5-gtk
-          noto-fonts-cjk-sans
-          wqy_zenhei
-          sarasa-gothic
-        ];
-    })
-
     nodejs
     conda
 
@@ -79,10 +61,10 @@
     splayer-next
     yt-dlp
     ffmpeg
-    scanmem
     gimp
 
     # 系统工具
+    scanmem
     piper
     ventoy-full-qt
     traceroute
@@ -99,7 +81,6 @@
     kdePackages.kamoso
     kdePackages.krecorder
     kdePackages.kwave
-    supergfxctl-plasmoid
     kdePackages.sweeper
     kdePackages.ksystemlog
     kdePackages.sddm-kcm

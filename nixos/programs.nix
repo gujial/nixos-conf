@@ -23,11 +23,6 @@
     kdeconnect.enable = true;
     direnv.enable = true;
     partition-manager.enable = true;
-
-    # clash-verge = {
-    #   enable = true;
-    # };
-
     firejail.enable = false;
 
     gamemode.enable = true;
@@ -83,12 +78,6 @@
         libx11
         libxext
       ];
-    };
-
-    weylus = {
-      enable = true;
-      openFirewall = true;
-      users = [ "gujial" ];
     };
 
     virt-manager.enable = true;

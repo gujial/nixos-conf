@@ -9,7 +9,7 @@ _:
 
     # 字体
     font = {
-      name = "hack";
+      name = "maple mono";
       size = 11;
     };
 
@@ -46,7 +46,7 @@ _:
 
       remember_window_size = "no";
       initial_window_width = 1280;
-      initial_window_height = 720;
+      initial_window_height = 900;
 
       cursor_trail = 1;
       auto_reload_config = -1;

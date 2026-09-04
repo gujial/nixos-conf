@@ -14,7 +14,7 @@
     ./home/variables.nix
     ./home/git.nix
     ./home/vscode.nix
-    # ./home/kitty.nix
+    ./home/kitty.nix
     ./home/tmux.nix
     ./home/plasma.nix
     ./home/programs.nix
