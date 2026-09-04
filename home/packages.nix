@@ -72,6 +72,7 @@
 
     # KDE 应用
     kdePackages.spectacle
+    kdePackages.dolphin-plugins
     kdePackages.kcalc
     kdePackages.krdc
     kdePackages.filelight
