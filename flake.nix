@@ -70,6 +70,16 @@
     };
 
     codex-desktop-linux.url = "github:ilysenko/codex-desktop-linux";
+
+    creamlinux-installer = {
+      url = "github:gujial/creamlinux-installer-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    samrewritten = {
+      url = "github:gujial/samrewritten-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -78,100 +88,46 @@
       home-manager,
       lanzaboote,
       nur,
-      re3-flake,
-      tinyMediaManager-flake,
       lazyvim-flake,
       plasma-manager,
-      browser-previews,
-      pfte-flake,
       catppuccin,
       noctalia,
-      nix-auth,
-      claude-desktop,
       codex-desktop-linux,
       ...
     }:
+    let
+      system = "x86_64-linux";
+    in
     {
-      nixosConfigurations = {
-        laptop-gu = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./configuration.nix
+      nixosConfigurations.laptop-gu = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
 
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                backupFileExtension = "backup";
-                extraSpecialArgs = { inherit inputs; };
-                users.gujial = import ./home.nix;
-                sharedModules = [
-                  plasma-manager.homeModules.plasma-manager
-                  catppuccin.homeModules.catppuccin
-                  noctalia.homeModules.default
-                ];
-              };
-              nixpkgs.overlays = [ nur.overlays.default ];
-            }
+        modules = [
+          ./configuration.nix
 
-            lanzaboote.nixosModules.lanzaboote
-            (
-              { pkgs, lib, ... }:
-              {
-                environment.systemPackages = [
-                  # For debugging and troubleshooting Secure Boot.
-                  pkgs.sbctl
-                ];
+          lanzaboote.nixosModules.lanzaboote
+          lazyvim-flake.nixosModules.lazyvim
+          codex-desktop-linux.nixosModules.default
 
-                # Lanzaboote currently replaces the systemd-boot module.
-                # This setting is usually set to true in configuration.nix
-                # generated at installation time. So we force it to false
-                # for now.
-                boot.loader.systemd-boot.enable = lib.mkForce false;
+          home-manager.nixosModules.home-manager
+          {
+            nixpkgs.overlays = [ nur.overlays.default ];
 
-                boot.lanzaboote = {
-                  enable = true;
-                  pkiBundle = "/var/lib/sbctl";
-                };
-              }
-            )
-
-            lazyvim-flake.nixosModules.lazyvim
-
-            (
-              { pkgs, ... }:
-              {
-                nixpkgs.overlays = [
-                  nur.overlays.default
-                ];
-
-                environment.systemPackages = [
-                  (claude-desktop.packages.${pkgs.stdenv.hostPlatform.system}.claude-desktop.override {
-                    nodePackages = { inherit (pkgs) asar; };
-                  })
-                  nix-auth.packages.${pkgs.stdenv.hostPlatform.system}.default
-                  re3-flake.packages.${pkgs.stdenv.hostPlatform.system}.reVC-Improved
-                  tinyMediaManager-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
-                  browser-previews.packages.${pkgs.stdenv.hostPlatform.system}.google-chrome
-                  pfte-flake.packages.${pkgs.stdenv.hostPlatform.system}.default
-                ];
-              }
-            )
-
-            codex-desktop-linux.nixosModules.default
-
-            (
-              { pkgs, ... }:
-              {
-                fonts.packages = [
-                  pkgs.nur.repos.rewine.ttf-wps-fonts
-                  pkgs.nur.repos.rewine.ttf-ms-win10
-                ];
-              }
-            )
-          ];
-        };
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "backup";
+              extraSpecialArgs = { inherit inputs; };
+              users.gujial = import ./home.nix;
+              sharedModules = [
+                plasma-manager.homeModules.plasma-manager
+                catppuccin.homeModules.catppuccin
+                noctalia.homeModules.default
+              ];
+            };
+          }
+        ];
       };
     };
 }

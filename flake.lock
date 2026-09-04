@@ -70,11 +70,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1788502697,
-        "narHash": "sha256-mcH7gBS8XjG+PB8GRQQki4LPwbflatADXBQImsKowzQ=",
+        "lastModified": 1788516737,
+        "narHash": "sha256-dpm5KSNiwC9IG6SpNw0iuhpjtJv6C+8m0G+5tDKQQkc=",
         "owner": "ilysenko",
         "repo": "codex-desktop-linux",
-        "rev": "d15120958546a5f73d61f1f765dbe114440dcf70",
+        "rev": "23c55eb49ca724e8b7a1e698c1f3df075be42631",
         "type": "github"
       },
       "original": {
@@ -95,6 +95,44 @@
       "original": {
         "owner": "ipetkov",
         "repo": "crane",
+        "type": "github"
+      }
+    },
+    "creamlinux-installer": {
+      "inputs": {
+        "creamlinux-src": "creamlinux-src",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788525345,
+        "narHash": "sha256-Jc0xu7CzfEwW1RlpMHF/UnPkmFw4RCNNFN840BBP9CY=",
+        "owner": "gujial",
+        "repo": "creamlinux-installer-flake",
+        "rev": "ec404126aadfddf7248e3dc10646aa5543cf4e5d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gujial",
+        "repo": "creamlinux-installer-flake",
+        "type": "github"
+      }
+    },
+    "creamlinux-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783846734,
+        "narHash": "sha256-sV23mp0XnJHf4oSqqvFLFfvSkssHzxafqYMNw3HGEdg=",
+        "owner": "Novattz",
+        "repo": "creamlinux-installer",
+        "rev": "7c16b63b41f984a1f480fa14ce78da4cc4869a66",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Novattz",
+        "ref": "main",
+        "repo": "creamlinux-installer",
         "type": "github"
       }
     },
@@ -687,11 +725,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788512036,
-        "narHash": "sha256-7snKGlOrcV8bqetPTnc9WPjg8b/nGvaDWxWoNxSVBVI=",
+        "lastModified": 1788530176,
+        "narHash": "sha256-p28zq9jnKKpxzuzQT5e1ZRpd0oBkbLm2GoRogUPAT/U=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "7cae767fcd8d1f3a61731a43b93a3cb37f0beabb",
+        "rev": "17eed771c4c45f713ed3e98fa95df64057f3de33",
         "type": "github"
       },
       "original": {
@@ -1080,6 +1118,7 @@
         "catppuccin": "catppuccin",
         "claude-desktop": "claude-desktop",
         "codex-desktop-linux": "codex-desktop-linux",
+        "creamlinux-installer": "creamlinux-installer",
         "flake-utils": "flake-utils_3",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
@@ -1091,6 +1130,7 @@
         "pfte-flake": "pfte-flake",
         "plasma-manager": "plasma-manager",
         "re3-flake": "re3-flake",
+        "samrewritten": "samrewritten",
         "tinyMediaManager-flake": "tinyMediaManager-flake"
       }
     },
@@ -1112,6 +1152,44 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "samrewritten": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "samrewritten-src": "samrewritten-src"
+      },
+      "locked": {
+        "lastModified": 1788530633,
+        "narHash": "sha256-UX4QWz+Y2qCmOf7jJ6jmeFGuCWv5dA8YZkKOISU03Ck=",
+        "owner": "gujial",
+        "repo": "samrewritten-flake",
+        "rev": "96cb68d6fbdd518f31199fe7236f21d4ac7db5a4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gujial",
+        "repo": "samrewritten-flake",
+        "type": "github"
+      }
+    },
+    "samrewritten-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788388614,
+        "narHash": "sha256-bInGVZ5ghIvaOC7ztPkBnhtt2Euo/5nM4KpZvYOu2ag=",
+        "owner": "PaulCombal",
+        "repo": "SamRewritten",
+        "rev": "a243cc0fe6b67c67e41240b07310f77267a55322",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PaulCombal",
+        "ref": "master",
+        "repo": "SamRewritten",
         "type": "github"
       }
     },

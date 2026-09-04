@@ -1,11 +1,12 @@
 # 引导加载程序与内核配置
-# lanzaboote（Secure Boot）由 flake.nix 注入，会强制覆盖 systemd-boot
-{ config, pkgs, ... }:
+# lanzaboote 模块由 flake.nix 注入，具体设置集中在此处
+{ config, lib, pkgs, ... }:
 
 {
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      # lanzaboote replaces the regular systemd-boot module.
+      systemd-boot.enable = lib.mkForce false;
       efi.canTouchEfiVariables = true;
       systemd-boot.configurationLimit = 10;
     };
@@ -24,5 +25,10 @@
     '';
 
     initrd.systemd.enable = true;
+
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
+    };
   };
 }

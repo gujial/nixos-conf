@@ -27,6 +27,8 @@ in
       wqy_microhei
       corefonts
       localAssetFonts
+      nur.repos.rewine.ttf-wps-fonts
+      nur.repos.rewine.ttf-ms-win10
     ];
 
     fontDir.enable = true;
