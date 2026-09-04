@@ -6,9 +6,6 @@ let
 in
 {
   environment.systemPackages = [
-    (inputs.claude-desktop.packages.${system}.claude-desktop.override {
-      nodePackages = { inherit (pkgs) asar; };
-    })
     inputs.nix-auth.packages.${system}.default
     inputs.re3-flake.packages.${system}.reVC-Improved
     inputs.tinyMediaManager-flake.packages.${system}.default
@@ -19,7 +16,8 @@ in
 
     # Secure Boot diagnostics
     pkgs.sbctl
-  ] ++ (with pkgs; [
+  ]
+  ++ (with pkgs; [
     wget
     gnupg
     git
