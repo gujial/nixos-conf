@@ -18,6 +18,7 @@ in
     pkgs.sbctl
   ]
   ++ (with pkgs; [
+    podman-compose
     wget
     gnupg
     git
