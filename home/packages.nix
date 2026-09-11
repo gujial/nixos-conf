@@ -11,6 +11,7 @@
     obsidian
     libreoffice
     # nur.repos.xddxdd.baidunetdisk
+    texliveFull
     qpwgraph
     unzip
     net-tools

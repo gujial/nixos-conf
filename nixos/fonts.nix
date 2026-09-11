@@ -23,6 +23,8 @@ in
       fira-code
       hack-font
       source-code-pro
+      source-han-sans
+      source-han-serif
       wqy_zenhei
       wqy_microhei
       corefonts
