@@ -11,6 +11,7 @@
     obsidian
     libreoffice
     # nur.repos.xddxdd.baidunetdisk
+    wemeet
     texliveFull
     qpwgraph
     unzip
@@ -91,6 +92,7 @@
     kdePackages.korganizer
     kdePackages.akonadi-calendar
     kdePackages.kunifiedpush
+    kdePackages.tokodon
     okteta
     labplot
     krita

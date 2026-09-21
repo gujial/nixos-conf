@@ -55,9 +55,15 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
       localNetworkGameTransfers.openFirewall = true;
+      gamescopeSession.enable = true;
       package = pkgs.steam.override {
         extraPkgs = p: [ p.kdePackages.breeze ];
       };
+    };
+
+    gamescope = {
+      enable = true;
+      capSysNice = true;
     };
 
     nix-ld = {
