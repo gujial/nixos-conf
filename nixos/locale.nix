@@ -22,6 +22,7 @@
     inputMethod = {
       type = "fcitx5";
       enable = true;
+      fcitx5.waylandFrontend = true;
       fcitx5.addons = with pkgs; [
         fcitx5-gtk
         kdePackages.fcitx5-qt
@@ -32,10 +33,10 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    QT_IM_MODULES = "wayland;fcitx";
     XMODIFIERS = "@im=fcitx";
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    SDL_IM_MODULE = "fcitx";
+    #   QT_IM_MODULES = "wayland;fcitx";
+    #   GTK_IM_MODULE = "fcitx";
+    #   QT_IM_MODULE = "fcitx";
+    #   SDL_IM_MODULE = "fcitx";
   };
 }
