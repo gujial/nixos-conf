@@ -31,6 +31,7 @@
   };
 
   environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
     QT_IM_MODULES = "wayland;fcitx";
     XMODIFIERS = "@im=fcitx";
     GTK_IM_MODULE = "fcitx";
