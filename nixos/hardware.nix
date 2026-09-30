@@ -10,7 +10,7 @@
     graphics.enable = true;
 
     nvidia = {
-      open = true;
+      open = false;
       modesetting.enable = true;
 
       prime = {

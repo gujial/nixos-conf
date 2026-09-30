@@ -32,7 +32,15 @@
     partition-manager.enable = true;
     firejail.enable = false;
 
-    gamemode.enable = true;
+    gamescope = {
+      enable = true;
+      capSysNice = false;
+    };
+
+    gamemode = {
+      enable = true;
+      enableRenice = true;
+    };
 
     kde-pim = {
       enable = true;
@@ -59,11 +67,6 @@
       package = pkgs.steam.override {
         extraPkgs = p: [ p.kdePackages.breeze ];
       };
-    };
-
-    gamescope = {
-      enable = true;
-      capSysNice = true;
     };
 
     nix-ld = {

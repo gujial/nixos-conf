@@ -18,5 +18,7 @@
         input-overlay
       ];
     };
+
+    lutris.enable = true;
   };
 }
