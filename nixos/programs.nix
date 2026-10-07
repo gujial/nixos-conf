@@ -3,13 +3,6 @@
 
 {
   programs = {
-    ssh.extraConfig = ''
-      Host forgejo-ssh.gujial.cc
-        User git
-        ProxyCommand ${pkgs.cloudflared}/bin/cloudflared access ssh --hostname %h
-      Host *
-    '';
-
     zsh = {
       enable = true;
       enableCompletion = true;

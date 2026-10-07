@@ -44,7 +44,6 @@
 
     envfs.enable = true;
     openssh.enable = true;
-    # cloudflare-warp.enable = true;
     # kubo = {
     #   enable = true;
     #   settings = {

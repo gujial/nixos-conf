@@ -22,7 +22,6 @@ in
     wget
     gnupg
     git
-    cloudflared
     unrar
     nvtopPackages.nvidia
     noto-fonts
