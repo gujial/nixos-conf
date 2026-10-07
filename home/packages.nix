@@ -10,7 +10,8 @@
     telegram-desktop
     obsidian
     libreoffice
-    # nur.repos.xddxdd.baidunetdisk
+    nur.repos.xddxdd.baidunetdisk
+    rssguard
     wemeet
     texliveFull
     qpwgraph
@@ -96,6 +97,5 @@
     okteta
     labplot
     krita
-    kdePackages.akregator
   ];
 }
