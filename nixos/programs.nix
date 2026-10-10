@@ -37,7 +37,6 @@
 
     kde-pim = {
       enable = true;
-      kmail = true;
       kontact = true;
     };
 

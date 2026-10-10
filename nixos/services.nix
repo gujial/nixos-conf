@@ -13,6 +13,9 @@
     fwupd.enable = true;
     ratbagd.enable = true;
 
+    softether.vpnclient.enable = true;
+    softether.enable = true;
+
     xrdp = {
       enable = true;
       defaultWindowManager = "startplasma-x11";
