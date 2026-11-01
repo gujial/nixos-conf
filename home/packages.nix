@@ -46,7 +46,7 @@
     gdb
     # godot
     github-copilot-cli
-    cutter
+    # cutter
     dotnet-sdk_10
     android-tools
     scrcpy
@@ -80,7 +80,6 @@
     kdePackages.krdc
     kdePackages.filelight
     kdePackages.isoimagewriter
-    kdePackages.kmousetool
     kdePackages.kdenlive
     kdePackages.kamoso
     kdePackages.krecorder

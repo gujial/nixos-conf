@@ -85,12 +85,14 @@
         libGLU
         libx11
         libxext
+        dhcpcd
       ];
     };
 
     virt-manager.enable = true;
     wireshark.enable = true;
     codexDesktopLinux.enable = true;
+    ydotool.enable = true;
     # hyprland = {
     #   enable = true;
     #   withUWSM = true;
