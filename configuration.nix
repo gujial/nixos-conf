@@ -45,6 +45,8 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+    # Lutris 的 FHS 运行环境仍依赖 GTK2；迁移后移除此兼容例外。
+    config.problems.handlers."gtk+".broken = "warn";
     config.permittedInsecurePackages = [
       "ventoy-qt5-1.1.18"
       "mbedtls-2.28.10"

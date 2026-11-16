@@ -63,6 +63,8 @@
 
     nix-auth.url = "github:numtide/nix-auth";
 
+    horizon.url = "github:gujial/horizon-flake";
+
     claude-desktop = {
       url = "github:k3d3/claude-desktop-linux-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -93,6 +95,7 @@
       catppuccin,
       noctalia,
       codex-desktop-linux,
+      horizon,
       ...
     }:
     let

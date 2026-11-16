@@ -13,6 +13,7 @@ in
     inputs.pfte-flake.packages.${system}.default
     inputs.creamlinux-installer.packages.${system}.default
     inputs.samrewritten.packages.${system}.default
+    inputs.horizon.packages.x86_64-linux.horizon-launcher
 
     # Secure Boot diagnostics
     pkgs.sbctl

@@ -29,7 +29,6 @@
     osu-lazer-bin
     prismlauncher
     protonplus
-    zeroad
 
     # 开发工具
     uv
@@ -61,7 +60,10 @@
 
     # 多媒体
     darktable
-    splayer-next
+    (splayer-next.overrideAttrs (old: {
+      # cargoSetupHook requires system AWS-LC; OpenSSL cannot substitute for it.
+      buildInputs = (old.buildInputs or [ ]) ++ [ aws-lc ];
+    }))
     yt-dlp
     ffmpeg
     gimp
